@@ -1,0 +1,208 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bonus_main"
+    tools:context="com.chinaslots.ui.GameFragment">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bonus_top2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAccessibility="no" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bonus_top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAccessibility="no" />
+
+
+    <ImageView
+        android:id="@+id/flow_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/flow_left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:importantForAccessibility="no" />
+
+    <ImageView
+        android:id="@+id/flow_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/flow_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:importantForAccessibility="no" />
+
+    <ImageView
+        android:id="@+id/flowCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/flow_centr"
+        app:layout_constraintBottom_toBottomOf="@+id/flow_left"
+        app:layout_constraintEnd_toStartOf="@+id/flow_right"
+        app:layout_constraintStart_toEndOf="@+id/flow_left"
+        android:importantForAccessibility="no" />
+
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bottom_bo"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:importantForAccessibility="no" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bonus_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:importantForAccessibility="no" />
+
+    <ImageView
+        android:id="@+id/count"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:src="@drawable/bonus_take_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAccessibility="no" />
+
+    <TextView
+        android:id="@+id/text_count"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ultra"
+        android:gravity="center"
+        tools:text="15"
+        android:textColor="@color/my"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="@id/count"
+        app:layout_constraintEnd_toEndOf="@id/count"
+        app:layout_constraintStart_toStartOf="@id/count"
+        app:layout_constraintTop_toTopOf="@id/count" />
+
+
+    <ImageView
+        android:id="@+id/swap"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bonus_take_back"
+        app:layout_constraintBottom_toTopOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:importantForAccessibility="no" />
+
+
+    <ImageView
+        android:id="@+id/swap_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="44dp"
+        android:src="@drawable/swap"
+        app:layout_constraintBottom_toBottomOf="@id/swap"
+        app:layout_constraintEnd_toEndOf="@id/swap"
+        app:layout_constraintStart_toStartOf="@id/swap"
+        app:layout_constraintTop_toTopOf="@id/swap"
+        android:importantForAccessibility="no" />
+
+
+    <GridView
+        android:id="@+id/grid_game"
+        android:layout_width="360dp"
+        android:layout_height="360dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+
+        android:numColumns="5"
+        app:layout_constraintBottom_toTopOf="@+id/swap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/count"
+        tools:listitem="@layout/game_item_layout" />
+
+
+    <ImageView
+        android:id="@+id/win_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/win_back"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible"
+        android:importantForAccessibility="no" />
+
+    <ImageView
+        android:id="@+id/button_home"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/ic_home"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/win_back"
+        app:layout_constraintStart_toStartOf="@id/win_back"
+        app:layout_constraintTop_toBottomOf="@+id/win_back"
+        tools:visibility="visible"
+        android:importantForAccessibility="no" />
+
+
+    <ImageView
+        android:id="@+id/win"
+        android:layout_width="240dp"
+        android:layout_height="120dp"
+        android:src="@drawable/win"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/win_back"
+        app:layout_constraintEnd_toEndOf="@id/win_back"
+        app:layout_constraintStart_toStartOf="@id/win_back"
+        app:layout_constraintTop_toTopOf="@id/win_back"
+        tools:visibility="visible"
+        android:importantForAccessibility="no" />
+
+
+    <ImageView
+        android:id="@+id/lose"
+        android:layout_width="240dp"
+        android:layout_height="120dp"
+        android:src="@drawable/lose"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/win_back"
+        app:layout_constraintEnd_toEndOf="@id/win_back"
+        app:layout_constraintStart_toStartOf="@id/win_back"
+        app:layout_constraintTop_toTopOf="@id/win_back"
+        tools:visibility="visible"
+        android:importantForAccessibility="no" />
+
+
+    <TextView
+        android:id="@+id/text_skill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="4 out of 5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/ultra"
+        android:textColor="@color/black"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
